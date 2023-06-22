@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat js</title>
+    <!-- tragimos a bustrack -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Chat</h1>
+    <!-- pusimos el nombre del chat con estilos css -->
+     <nav class="nav navbar-dark bg-dark">
+        <a href="/" class="nav navbar-brand mx-auto" >Chat-js</a>
+     </nav>
+
+     <!-- haciendo donde se registran  -->
+     <div class="card col-md-4 mx-auto mt-5"  id="nick-wrap">
+           <div class="card-header">
+             <h4>Como es tu nombre?</h4>
+            </div>
+         <!--esto hace que si el nombre de usuario es igual tire error  -->
+            <p id="nick-error" ></p>
+
+          <!--hicimos el redtro del formulario del resgistro   -->
+            <div class="card-body">
+                <form id="nick-form">
+                    <input type="text" , id="nick-name" class="form-control">
+                 
+                    <button type="submit" class="btn btn-success mt-3" id="nick-btn">Acceder</button>
+
+                </form>
+            </div>
+       </div>
+
+            <!--FORMULARIO CHAT  -->
+
+
 
     <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
     <script src="./js/main.js"></script>
