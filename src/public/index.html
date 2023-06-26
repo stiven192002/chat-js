@@ -35,7 +35,65 @@
 
             <!--FORMULARIO CHAT  -->
 
+       <div class="container" id="content-wrap">
+             
+            <div class="row">
 
+                    <div class="col-md-7 mt-5">
+                      
+                        <div class="card">
+
+                              <div class="card-header">
+
+                                <h4>CHAT</h4>
+                              </div>
+
+                              <div class="card-body" id="chat">
+                             </div>
+
+                          <form id="message-form"  class="card-footer">
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="message">
+
+                                 <div class="input-group-append">
+                                     <button class="btn btn-success" type="submit">Enviar</button>
+                                 </div>
+
+                            </div>
+
+
+                          </form>
+                        </div>
+                    </div>
+
+
+
+                <div class="col-md-4 mt-5">
+ 
+                     <div class="card">
+
+                            <div class="card-header">
+                                <h4>Usuarios Conectados</h4>
+                            </div>
+
+                            <div class="card-body">
+                                <div id="usernames">
+                                    
+                                </div>     
+                            </div>
+
+
+                     </div>                   
+                            
+                            
+
+                </div>  
+               
+
+
+            </div>       
+                
+       </div>
 
     <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
     <script src="./js/main.js"></script>
