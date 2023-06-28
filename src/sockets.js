@@ -1,4 +1,8 @@
  module.exports = (io) =>{
+
+  let nickName =[];
+
+
     io.on("connection" , socket =>{
         console.log("Nuevo Usuario Conectado ");
 
@@ -7,10 +11,29 @@
      //console.log(datos);//
 
      io.sockets.emit("nuevo mensaje",{
-        msg:datos
-     })
+        msg:datos,
+        username:socket.nickName
+
+         })
     });
 
+
+ socket.on("nuevo usuario", (datos, callback) =>{
+    
+      if(nickName.indexOf(datos)  != -1){
+        callback(true);
+      }else{
+        callback(true);
+        socket.nickName = datos;
+        nickName.push(socket.nickName);
+
+
+        io.sockets.emit("nombre usuario", nickName);
+      }
+
+      
+
+      }); 
          
     })
  }
